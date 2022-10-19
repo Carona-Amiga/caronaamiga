@@ -1,0 +1,297 @@
+/* variaveis */
+:root {
+  --text-color-purple: #6c63ff;
+  --text-color-purple-light: #948ffc;
+  --primary-text-color: #474747;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Desativar seta */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.purple {
+  background-color: var(--text-color-purple) !important;
+}
+
+.purple-b {
+  background-color: var(--text-color-purple) !important;
+}
+
+.purple-b:hover {
+  background-color: var(--text-color-purple-light) !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.space {
+  margin-right: 23px;
+}
+
+#navbarScrollingDropdown {
+  color: white !important;
+}
+
+@media screen and (max-width: 990px) {
+  .navbar-toggler {
+    background-color: white !important;
+  }
+
+  #navbarScrollingDropdown,
+  .imgUser {
+    display: none;
+  }
+
+  .navbar-toggler {
+    background-color: white !important;
+  }
+
+  .nresponse,
+  p {
+    color: white;
+  }
+
+  .nresponse,
+  p:hover {
+    color: var(--text-color-purple);
+  }
+}
+
+@media screen and (min-width: 990px) {
+
+  .nresponse,
+  .nresponse:hover,
+  .navbar-s p {
+    overflow: hidden !important;
+    display: none;
+    cursor: default !important;
+  }
+}
+
+#buttonSearch {
+  background-color: white;
+  color: var(--text-color-purple);
+  font-weight: bold;
+}
+
+#buttonSearch:hover {
+  background-color: var(--text-color-purple);
+  color: white;
+  font-weight: bold;
+}
+
+.navDropdown-item {
+  background-color: var(--text-color-purple) !important;
+  color: white !important;
+}
+
+.navDropdown-item:hover {
+  background-color: white !important;
+  color: var(--text-color-purple) !important;
+}
+
+.d-flex {
+  margin-right: 10px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins';
+  font-size: 16px;
+  background-color: #fcfcfc;
+}
+
+.border-bottom {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.w-30 {
+  width: 33%;
+}
+
+.border {
+  border: 0.5px solid #ccc;
+}
+
+.icon-sm {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.icon-md {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.icon-color {
+  color: #727272;
+}
+
+.icon-color:hover {
+  color: #4e4b4b;
+}
+
+.font-bold {
+  font-weight: 500;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-size: 18px;
+}
+
+.font-small {
+  font-size: 14px;
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.search-bar {
+  border-radius: 6px;
+}
+
+.box-shadow {
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.search-bar .row {
+  padding: 5px 0;
+}
+
+div.profile {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+div.profile-small {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+div.profile {
+  margin-top: -10px;
+}
+
+.search-bar .row>div:not(:last-child) {
+  position: relative;
+}
+
+.search-bar .row>div:not(:last-child)::after {
+  content: '';
+
+  height: 63%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+
+  border-radius: 2px;
+}
+
+.primary-text-color {
+  color: #474747;
+}
+
+.secondary-text-color {
+  color: #898888;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.page:hover,
+.page.selected {
+  background-color: #707070;
+  color: #fff;
+}
+
+form.register {
+  width: 450px;
+}
+
+div.input:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+div.input>label,
+div.input>span {
+  font-weight: 500;
+}
+
+div.input>input,
+div.input>div.edit-input input {
+  border: 2px solid #ccc;
+  height: 45px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  background: none !important;
+  display: none !important;
+}
+
+input[type='date'],
+input[type='time'] {
+  color: #727272;
+}
+
+.homepage .card {
+  width: 280px;
+}
+
+.chat-message-sent,
+.chat-message-received {
+  border-radius: 8px;
+}
+
+.chat-message-sent {
+  background-color: #0b89cf;
+  border-top-right-radius: 0px;
+}
+
+.chat-message-received {
+  background-color: #dddddd;
+  border-top-left-radius: 0px;
+}
+
+.details {
+  min-width: 500px;
+}
+
+.carona-card {
+  width: 200px;
+}
+
+.carona-card:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+  transition: ease-in-out;
+}
