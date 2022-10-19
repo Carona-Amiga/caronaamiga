@@ -4,6 +4,12 @@
 
 >Inserir pequena descrição do projeto
 
+# Pull Request
+
+Quer fazer um Pull Request? 
+
+Acesse nosso documento informando como isso é feito em um passo a passo [aqui](./docs/Processo/project-guidelines.md).
+
 # Tecnologias Utilizadas
 
 As ferramentas a seguir estão sendo utilizadas no projeto:
