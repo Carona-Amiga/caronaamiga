@@ -114,7 +114,7 @@ e trabalho.
 
 <h2 id="diagrama-de-casos-de-uso">Diagrama de casos de uso</h2>
 
-<img src="./diagrama_de_casos_de_uso.png" alt="Diagrama de casos de uso" width="750" />
+![diagrama_de_casos_de_uso](https://user-images.githubusercontent.com/77278366/196992049-43d0e256-3475-46d2-ab91-5ee521ee6607.png)
 
 <h2 id="requisitos-funcionais-x-casos-de-uso">Requisitos funcionais x Casos de uso</h2>
 
