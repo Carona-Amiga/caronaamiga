@@ -41,6 +41,7 @@ Após o passo 3 do fluxo básico
  1. Sistema exibe a mensagem “Nenhuma carona disponível com essas características” na própria página
 
 ## Protótipo(s) de interface do CDU
-![inicial](https://user-images.githubusercontent.com/37476677/148705376-ed0f5385-fbf2-418b-a008-4c7da0640357.png)
-![resultados](https://user-images.githubusercontent.com/37476677/148705421-2eb20eac-c993-47a6-9c20-b00d5fe32306.png)
+![Inicial](https://user-images.githubusercontent.com/77278366/196989819-58ad5b6e-564b-42e2-92ad-b22e1232ad8f.png)
+![Pesquisa](https://user-images.githubusercontent.com/77278366/196989830-b269d16c-74da-42a1-a3c0-3fccb755ef16.png)
+
 
