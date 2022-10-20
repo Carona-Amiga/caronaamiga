@@ -37,4 +37,5 @@ Após o passo 4 do fluxo básico
 
 ## Protótipo(s) de interface do CDU
 
-![chat](https://user-images.githubusercontent.com/37476677/148706008-5083bad0-d3c0-4780-8663-2f3c25f47108.png)
+![Mensagens](https://user-images.githubusercontent.com/77278366/196989643-e8577d3d-0f46-4f20-8aee-1721a536f033.png)
+
