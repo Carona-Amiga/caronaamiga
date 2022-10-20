@@ -48,7 +48,8 @@ Em qualquer momento após o passo 4 do fluxo básico
 
 ## Protótipo(s) de interface do CDU
 
-![editar carona](https://user-images.githubusercontent.com/37476677/148703627-0fb213c6-06d0-4847-be9e-e6c832423875.png)
-![caronas](https://user-images.githubusercontent.com/37476677/148703642-6e941b1c-ab0c-48e3-b894-d342868b193c.png)
+![Editar carona](https://user-images.githubusercontent.com/77278366/196989264-45becb83-403f-415f-a393-37ce6d6b6ec9.png)
+![Caronas](https://user-images.githubusercontent.com/77278366/196989275-9b9c7f3f-3981-4a53-a64c-05d4fdd8764a.png)
+
 
 
