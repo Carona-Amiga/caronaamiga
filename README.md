@@ -33,7 +33,7 @@ Leia atentamente as instruções e se tiver algum problema que não consiga reso
  + [Documento de visão](docs/README.md)
  + [Diagrama de casos de uso](docs/diagrama_de_casos_de_uso.png)
  + Detalhamento de casos de uso
-   + [Criar carona](caronaamiga/docs/Casos de Usos/oferecer_carona_CDU.md)
+   + [Oferecer carona](caronaamiga/docs/Casos de Usos/oferecer_carona_CDU.md)
    + [Editar carona](caronaamiga/docs/Casos de Usos/editar_carona_CDU.md)
    + [Enviar mensagem para motorista](caronaamiga/docs/Casos de Usos/enviar_mensagem_motorista_CDU.md)
    + [Pesquisar carona](caronaamiga/docs/Casos de Usos/pesquisar_carona_CDU.md)
