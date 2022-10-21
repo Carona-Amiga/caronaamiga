@@ -17,14 +17,14 @@ _É interessante que faça mensagens de commits por arquivo e definindo o que fo
 
 + Sincronize com as últimas mudanças no repositório remoto
 ```
-git checkout develop
-git pull origin develop
+git checkout main
+git pull origin main
 ```
 
-+ Atualize sue *feature branch* com as ultimas alterações da **develop** usando rebase iterativo
++ Atualize sue *feature branch* com as ultimas alterações da **main** usando rebase iterativo
 ```
 git checkout <branch-name>
-git rebase -i develop
+git rebase -i main
 ```
 
 + Se você não tem conflitos, pule esse passo. Se você tem conflitos, resolva-os e continue onrebase
