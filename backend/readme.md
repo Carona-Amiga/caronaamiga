@@ -9,6 +9,10 @@
 
 ## Pre-requisitos
  + Python 3.8
+ + Docker
+ + Docker compose
+
+Obs.: **Docker compose** talvez seja necessário instalar separadamente em alguns sistema operacionais, então qualquer erro ou problema pesquise ou [abra uma issue](https://github.com/Carona-Amiga/caronaamiga/issues/new)
 
 ## Instalação
 Clone repositório:
@@ -61,11 +65,10 @@ A variável de ambiente `SECRET_KEY` pode ser obtido com o comando:
 python -c "import secrets; print(secrets.token_urlsafe())"
 ```
 
-Setup do banco de dados:
+Setup do banco de dados (comando para "construir" serviços utilizando Docker):
 ```bash
 docker compose up -d
 ```
-Comando para "construir" serviços utilizando Docker
 
 Execute a migração do banco de dados:
 ```bash
