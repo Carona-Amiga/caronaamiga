@@ -80,6 +80,8 @@ Para executar o servidor:
 python3 manage.py runserver
 ```
 
+O projeto estará rodando em `locahost:8000`
+
 ## Configuração do Linter
 
  + Selecionar o executação Python na pasta *env* (virtualenv)
