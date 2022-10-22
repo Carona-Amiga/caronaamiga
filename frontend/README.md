@@ -9,6 +9,16 @@
  npm install
  ```
 
+## Rodar o projeto
+```
+npm run dev
+```
+
+## Build para produção
+```
+npm run build
+```
+
 ## Configurar ESLint
 
 Se usando VSCode:
