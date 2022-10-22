@@ -9,8 +9,9 @@
  npm install
  ```
 
-## Rodar o projeto
-```
+## Rodar o projeto em desenvolvimento
+```bash
+# Projeto estará rodando em http://localhost:3000
 npm run dev
 ```
 
