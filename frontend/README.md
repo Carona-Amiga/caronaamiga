@@ -41,8 +41,8 @@ Se usando VSCode:
  + Definir como *linter* do Javascript
  ```json
  "eslint.validate": [
-      "typescript",
-      "javascript"
+      "javascript",
+      "javascriptreact"
   ],
  ```
 
