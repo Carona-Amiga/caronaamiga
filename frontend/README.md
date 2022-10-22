@@ -9,6 +9,17 @@
  npm install
  ```
 
+## Rodar o projeto em desenvolvimento
+```bash
+# Projeto estará rodando em http://localhost:3000
+npm run dev
+```
+
+## Build para produção
+```
+npm run build
+```
+
 ## Configurar ESLint
 
 Se usando VSCode:
@@ -31,8 +42,8 @@ Se usando VSCode:
  + Definir como *linter* do Javascript
  ```json
  "eslint.validate": [
-      "typescript",
-      "javascript"
+      "javascript",
+      "javascriptreact"
   ],
  ```
 
