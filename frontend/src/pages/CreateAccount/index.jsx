@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import TextareaField from '../../components/TextareaField'
 import TextField from '../../components/TextField'
 import { api } from '../../utils/api'
-import '../../assets/scss/auth.scss'
+import { Container } from './styles'
 
 const formInitialState = {
   name: '',
@@ -41,15 +41,14 @@ export const CreateAccount = () => {
   }
 
   return (
-    <div className='row g-0 auth-wrapper'>
-
-      <div className='col-12 col-md-5 col-lg-6 h-100 auth-background-col'>
+    <Container className='row g-0'>
+      <div className='col-12 col-md-5 col-lg-6 h-100 auth-background-col fixed-bottom'>
         <div className='auth-background-holder'></div>
         <div className='auth-background-mask'></div>
       </div>
 
       <div className='col-12 col-md-7 col-lg-6 auth-main-col text-center h-100'>
-        <div className='d-flex flex-column align-content-end justify-content-center h-100'>
+        <div className='d-flex flex-column align-content-end justify-content-start h-100'>
           <div className='auth-body mx-auto'>
             <div className='auth-form-container text-start'></div>
             <h2>Criar Conta</h2>
@@ -135,7 +134,7 @@ export const CreateAccount = () => {
                   <Col md={12} className='leftText'>
                     <TextField
                       type='text'
-                      description='Nome do usuário'
+                      description='Nome do usuário*'
                       placeholder='suetham'
                       name='username'
                       value={formData.username}
@@ -149,7 +148,7 @@ export const CreateAccount = () => {
                   <Col md={12} className='leftText'>
                     <TextField
                       type='password'
-                      description='Senha'
+                      description='Senha*'
                       placeholder='********'
                       name='password'
                       value={formData.password}
@@ -184,6 +183,6 @@ export const CreateAccount = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
