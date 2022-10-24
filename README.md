@@ -18,6 +18,9 @@ As ferramentas a seguir estão sendo utilizadas no projeto:
  - [Django](https://www.djangoproject.com/)
  - [virtualenv](https://pypi.org/project/virtualenv/)
  - [React](https://pt-br.reactjs.org/)
+ - [Docker](https://docs.docker.com/)
+ - [Vite](https://vitejs.dev/guide/)
+ - [Bootstrap](https://react-bootstrap.github.io/)
 
 # Instalação
 
