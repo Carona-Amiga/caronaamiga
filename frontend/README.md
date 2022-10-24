@@ -12,7 +12,7 @@
 
 ## Configurar variáveis de ambiente
 
-Um arquivo de exemplo estará pronto em `.env.sample`
+Um arquivo de exemplo estará pronto em `.env.sample`. Faça uma copia do arquivo `.env.sample`, renomeie para `.env`.
 
 ```
 VITE_API_URL=api_url
