@@ -61,13 +61,14 @@ A variável de ambiente `SECRET_KEY` pode ser obtido com o comando:
 python -c "import secrets; print(secrets.token_urlsafe())"
 ```
 
-```bash
-docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' caronaamiga_db
-```
-
 Setup do banco de dados (comando para "construir" serviços utilizando Docker):
 ```bash
 docker compose up -d
+```
+
+Criar DB_HOST=
+```bash
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' caronaamiga_db
 ```
 
 Execute a migração do banco de dados:
