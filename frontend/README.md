@@ -3,11 +3,23 @@
 ## Tecnologias
 + [React](https://pt-br.reactjs.org/)
 + [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
++ [Vite](https://vitejs.dev/)
 
 ## Instalar tudo
  ```r
  npm install
  ```
+
+## Configurar variáveis de ambiente
+
+Um arquivo de exemplo estará pronto em `.env.sample`
+
+```
+VITE_API_URL=api_url
+ESLINT_NO_DEV_ERRORS=true
+```
+
+A variável `VITE_API_URL` será onde estará as rotas do backend. Nesse projeto as rotas estarão em `http://localhost:8000/api` em ambiente de desenvolvimento.
 
 ## Rodar o projeto em desenvolvimento
 ```bash
