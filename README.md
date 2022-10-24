@@ -37,7 +37,7 @@ Leia atentamente as instruções e se tiver algum problema que não consiga reso
  + [Diagrama de casos de uso](docs/diagrama_de_casos_de_uso.png)
  + Detalhamento de casos de uso
    + [Oferecer carona](docs/CasosdeUsos/oferecer_carona_CDU.md)
-   + [Editar carona](docs/CasosdeUsos/editar_carona_CDU.md)
+   + [Editar carona](docs/Casos de Usos/editar_carona_CDU.md)
    + [Enviar mensagem para motorista](docs/CasosdeUsos/enviar_mensagem_motorista_CDU.md)
    + [Pesquisar carona](docs/CasosdeUsos/pesquisar_carona_CDU.md)
  + [Diagrama de classes](docs/DiagramadeClasses/diagramaClasse_caronaAmiga.pdf)
