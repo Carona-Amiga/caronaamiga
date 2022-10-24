@@ -54,15 +54,15 @@ SECRET_KEY=
 
 As variáveis `DB_USER`, `DB_PASSWORD`, `DB_NAME` pode ser usado qualquer uma que desejar. `DB_HOST` pode ser utilizado o *endereço IP* do container, que pode ser obtido pelo comando:
 
-```bash
-docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' caronaamiga_db
-```
-
 A variável de ambiente `SECRET_KEY` pode ser obtido com o comando:
 
 ```bash
 # Se não funcionar, use o comando python3
 python -c "import secrets; print(secrets.token_urlsafe())"
+```
+
+```bash
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' caronaamiga_db
 ```
 
 Setup do banco de dados (comando para "construir" serviços utilizando Docker):
