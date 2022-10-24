@@ -40,7 +40,7 @@ Leia atentamente as instruções e se tiver algum problema que não consiga reso
    + [Editar carona](docs/Casos_de_Usos/editar_carona_CDU.md)
    + [Enviar mensagem para motorista](docs/Casos_de_Usos/enviar_mensagem_motorista_CDU.md)
    + [Pesquisar carona](docs/Casos_de_Usos/pesquisar_carona_CDU.md)
- + [Diagrama de classes](docs/DiagramadeClasses/diagramaClasse_caronaAmiga.pdf)
+ + [Diagrama de classes](docs/Diagrama_de_Classes/diagramaClasse_caronaAmiga.pdf)
  + [Diagrama de entidade relacionamento](docs/Banco_de_Dados/diagrama_er.png)
  + [Lista de riscos](docs/Processo/lista_de_riscos.md)
  + [Glossário](docs/Processo/glossario.md)
