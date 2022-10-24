@@ -52,7 +52,7 @@ DB_HOST=
 SECRET_KEY=
 ```
 
-As variáveis `DB_USER`, `DB_PASSWORD`, `DB_NAME` pode ser usado qualquer uma que desejar. `DB_HOST` pode ser utilizado o *endereço IP* do container, que pode ser obtido pelo comando:
+As variáveis `DB_USER`, `DB_PASSWORD`, `DB_NAME` pode ser preenchido do jeito que desejar. `DB_HOST` pode ser utilizado o *endereço IP* do container (docker), que pode ser obtido pelo comando:
 
 A variável de ambiente `SECRET_KEY` pode ser obtido com o comando:
 
