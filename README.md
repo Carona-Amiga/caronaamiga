@@ -26,9 +26,9 @@ As ferramentas a seguir estão sendo utilizadas no projeto:
 
 Atualmente, a configuração da aplicação é feita em duas etapas:
 
-### [Instalação do Back-end](https://github.com/tads-cnat/caronaamiga22/blob/develop/backend/readme.md)
+### [Instalação do Back-end](https://github.com/Carona-Amiga/caronaamiga/blob/main/backend/readme.md)
 
-### [Instalação do Front-end](https://github.com/tads-cnat/caronaamiga22/blob/develop/frontend/README.md)
+### [Instalação do Front-end](https://github.com/Carona-Amiga/caronaamiga/blob/main/frontend/README.md)
 
 Leia atentamente as instruções e se tiver algum problema que não consiga resolver no processo, nos contate ou [abra uma issue](https://github.com/matheusinit/caronaamiga/issues/new/choose).
 
