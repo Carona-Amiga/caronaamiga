@@ -34,7 +34,7 @@ Leia atentamente as instruções e se tiver algum problema que não consiga reso
 
 # Documentação
  + [Documento de visão](docs/README.md)
- + [Diagrama de casos de uso](docs/diagrama_de_casos_de_uso.png)
+ + [Diagrama de casos de uso](docs/Diagrama_de_Classes/diagrama_de_casos_de_uso.png)
  + Detalhamento de casos de uso
    + [Oferecer carona](docs/Casos_de_Usos/oferecer_carona_CDU.md)
    + [Editar carona](docs/Casos_de_Usos/editar_carona_CDU.md)
