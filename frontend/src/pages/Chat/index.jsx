@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { SendFilled } from '@fluentui/react-icons'
+import { toast } from 'react-toastify'
+import useWebSocket from 'react-use-websocket'
 
 import { getFormatedTime } from './functions'
 import { Header } from '../../components/Header'
@@ -25,6 +27,28 @@ function Chat () {
   const [selectedUser, setSelectedUser] = useState(null)
   const [messagesListed, setMessagesListed] = useState([])
   const [busy, setBusy] = useState(false)
+
+  const { sendJsonMessage } = useWebSocket('ws://localhost:8000', {
+    onOpen: () => {
+      toast.success('Connected')
+    },
+    onClose: () => {
+      toast.error('Disconnected')
+    },
+    onMessage: (event) => {
+      const data = JSON.parse(event.data)
+      console.log(data)
+      switch (data.type) {
+      case 'list-messages':
+        setMessagesListed([...data.data])
+        break
+      default:
+        console.error('Unknown message type!')
+        break
+      }
+    }
+  })
+
   const { user } = useAuth()
 
   useEffect(() => {
@@ -78,30 +102,49 @@ function Chat () {
     setBusy(true)
   }
 
-  async function onSubmit (event) {
+  const sendMessage = event => {
     event.preventDefault()
 
     try {
-      const formData = {
-        content: messageInput,
-        receiver: selectedUser.id,
+      sendJsonMessage({
+        type: 'create-message',
+        message: messageInput,
         sender: user.id,
+        receiver: selectedUser.id,
         carpool: selectedUser.carpool.id
-      }
-
-      const token = getTokenInLS()
-
-      await api.post('/user-message', formData, {
-        headers: {
-          Authorization: `Token ${token}`
-        }
       })
 
-      location.reload()
+      setMessageInput('')
     } catch (err) {
+      toast.error('Um erro ocorreu!')
       console.log(err)
     }
   }
+
+  // async function onSubmit (event) {
+  //   event.preventDefault()
+
+  //   try {
+  //     const formData = {
+  //       content: messageInput,
+  //       receiver: selectedUser.id,
+  //       sender: user.id,
+  //       carpool: selectedUser.carpool.id
+  //     }
+
+  //     const token = getTokenInLS()
+
+  //     await api.post('/user-message', formData, {
+  //       headers: {
+  //         Authorization: `Token ${token}`
+  //       }
+  //     })
+
+  //     location.reload()
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
   return (
     <Body>
@@ -164,7 +207,7 @@ function Chat () {
                   </div>
 
                   {/* Message input */}
-                  <MessageInput onSubmit={onSubmit}>
+                  <MessageInput onSubmit={sendMessage}>
                     <input type='text' name='message' onChange={onChange} />
                     <button type='submit'>
                       <SendFilled fontSize='25px' color='#606060' />
