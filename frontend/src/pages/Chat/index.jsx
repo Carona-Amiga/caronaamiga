@@ -23,19 +23,15 @@ import { useAuth } from '../../hooks/useAuth'
 import { getTokenInLS } from '../../utils/auth'
 
 function Chat () {
+  const { user } = useAuth()
+
   const [messageInput, setMessageInput] = useState('')
   const [chatUsers, setChatUsers] = useState([])
   const [selectedUser, setSelectedUser] = useState(null)
   const [messagesListed, setMessagesListed] = useState([])
   const [busy, setBusy] = useState(false)
 
-  const { sendJsonMessage } = useWebSocket('ws://localhost:8000', {
-    onOpen: () => {
-      toast.success('Connected')
-    },
-    onClose: () => {
-      toast.error('Disconnected')
-    },
+  const { sendJsonMessage } = useWebSocket(`ws://localhost:8000/${user.id > selectedUser?.id ? user.id : selectedUser?.id}/${user.id > selectedUser?.id ? selectedUser?.id : user.id}`, {
     onMessage: (event) => {
       const data = JSON.parse(event.data)
       console.log(data)
@@ -49,8 +45,6 @@ function Chat () {
       }
     }
   })
-
-  const { user } = useAuth()
 
   useEffect(() => {
     const token = getTokenInLS()
