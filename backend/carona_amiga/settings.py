@@ -79,6 +79,11 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 
 ROOT_URLCONF = 'carona_amiga.urls'
 

@@ -1,3 +1,4 @@
+import json
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -13,7 +14,8 @@ from djangochannelsrestframework.mixins import (
     DeleteModelMixin,
 )
 from djangochannelsrestframework.generics import GenericAsyncAPIConsumer
-from channels.generic.websocket import JsonWebsocketConsumer
+from channels.generic.websocket import JsonWebsocketConsumer, AsyncJsonWebsocketConsumer
+from asgiref.sync import async_to_sync
 
 from django.contrib.auth.models import User
 
@@ -444,20 +446,44 @@ class ChatConsumer(JsonWebsocketConsumer):
     def __init__(self, *args, **kwargs):
         super().__init__(args, kwargs)
         self.room_name = None
+        self.room_group_name = None
 
     def connect(self):
         print('Connected!')
+        args = self.scope['url_route']['kwargs']
+
+        user_id = args['user_id']
+        secondary_user_id = args['secondary_user_id']
+
+        self.room_name = f"{user_id}_{secondary_user_id}"
+        self.room_group_name = 'chat_%s' % self.room_name
+
+
+        async_to_sync(self.channel_layer.group_add)(
+            self.room_group_name, self.channel_name
+        )
+    
         self.accept()
 
     def disconnect(self, code):
         print('Disconnected!')
+
+        async_to_sync(self.channel_layer.group_discard)(
+            self.room_group_name, self.channel_name
+        )
+
         return super().disconnect(code)
+
+    def list_message_group(self, event):
+        self.send_json(event["content"])
+        
 
     def receive_json(self, content, **kwargs):
         message_type = content["type"]
 
+        print(self.groups)
+
         if message_type == "create-message":
-            print(content)
 
             message = content["message"]
             receiver = Profile.objects.get(pk=content["receiver"])
@@ -479,13 +505,23 @@ class ChatConsumer(JsonWebsocketConsumer):
 
             userMessages = UserMessage.objects.filter(
                 Q(receiver=id) | Q(sender=id))
-
+            userMessages[0].content
             serializer = UserMessageSerializer(userMessages, many=True)
 
-            self.send_json({
-                "type": "list-messages",
-                "data": serializer.data
-            })
+            async_to_sync(self.channel_layer.group_send)(
+                self.room_group_name, {
+                    "type": "list_message_group",
+                    "content": {
+                        "type": "list-messages",
+                        "data": serializer.data
+                    }
+                }
+            )
+
+            # self.send_json({
+            #     "type": "list-messages",
+            #     "data": serializer.data
+            # })
 
         elif message_type == "list-messages":
             id = content["user_id"]
