@@ -25,7 +25,7 @@ function App () {
             {/* Private routes */}
             <Route path='/' element={<Home />} />
             <Route path='/criar-carona' element={<CreateCarpool />} />
-            <Route path='/chat' element={<Chat />} />
+            <Route path='/mensagens' element={<Chat />} />
           </Route>
 
           {/* Public routes */}

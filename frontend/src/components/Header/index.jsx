@@ -37,7 +37,10 @@ export function Header () {
             </NavDropdown.Item>
             <div className='d-flex'>
               <NavDropdown title={user.username} id='navbarScrollingDropdown'>
-                <NavDropdown.Item href='/chat' className='navDropdown-item'>
+                <NavDropdown.Item
+                  href='/mensagens'
+                  className='navDropdown-item'
+                >
                   Mensagens
                 </NavDropdown.Item>
                 <NavDropdown.Item
