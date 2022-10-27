@@ -106,6 +106,11 @@ function Chat () {
   const sendMessage = event => {
     event.preventDefault()
 
+    if (messageInput === '') {
+      toast.error('Nenhuma mensagem digitada')
+      return
+    }
+
     try {
       sendJsonMessage({
         type: 'create-message',
@@ -121,31 +126,6 @@ function Chat () {
       console.log(err)
     }
   }
-
-  // async function onSubmit (event) {
-  //   event.preventDefault()
-
-  //   try {
-  //     const formData = {
-  //       content: messageInput,
-  //       receiver: selectedUser.id,
-  //       sender: user.id,
-  //       carpool: selectedUser.carpool.id
-  //     }
-
-  //     const token = getTokenInLS()
-
-  //     await api.post('/user-message', formData, {
-  //       headers: {
-  //         Authorization: `Token ${token}`
-  //       }
-  //     })
-
-  //     location.reload()
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
 
   return (
     <Body>
@@ -209,7 +189,13 @@ function Chat () {
 
                   {/* Message input */}
                   <MessageInput onSubmit={sendMessage}>
-                    <input type='text' name='message' onChange={onChange} />
+                    <input
+                      type='text'
+                      name='message'
+                      onChange={onChange}
+                      value={messageInput}
+                      placeholder='Digite a mensagem'
+                    />
                     <button type='submit'>
                       <SendFilled fontSize='25px' color='#606060' />
                     </button>
