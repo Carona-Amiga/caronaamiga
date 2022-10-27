@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SendFilled } from '@fluentui/react-icons'
 import { toast } from 'react-toastify'
 import useWebSocket from 'react-use-websocket'
+import ScrollToBottom from 'react-scroll-to-bottom'
 
 import { getFormatedTime } from './functions'
 import { Header } from '../../components/Header'
@@ -187,7 +188,7 @@ function Chat () {
                 </div>
 
                 <div className='chat'>
-                  <div className='chat-history'>
+                  <ScrollToBottom className='chat-history'>
                     {messagesListed.map(message => (
                       <Message key={message.id} sent={message.sender.id === user.id}>
                         <div className='info'>
@@ -204,7 +205,7 @@ function Chat () {
                         </div>
                       </Message>
                     ))}
-                  </div>
+                  </ScrollToBottom>
 
                   {/* Message input */}
                   <MessageInput onSubmit={sendMessage}>
