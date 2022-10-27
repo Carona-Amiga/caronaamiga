@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import { UserProvider } from './hooks/useAuth'
 
@@ -20,20 +21,28 @@ function App () {
   return (
     <BrowserRouter>
       <UserProvider>
-        <Routes>
-          <Route path='/' element={<PrivateOutlet />}>
-            {/* Private routes */}
-            <Route path='/' element={<Home />} />
-            <Route path='/criar-carona' element={<CreateCarpool />} />
-            <Route path='/mensagens' element={<Chat />} />
-          </Route>
+        <>
+          <ToastContainer
+            autoClose={3000}
+            position='top-right'
+            pauseOnFocusLoss={false}
+          />
 
-          {/* Public routes */}
-          <Route path='/login' element={<SessionTest />} />
-          <Route path='/criar-conta' element={<CreateAccount />} />
-          <Route path='/ws' element={<TestWebsocket />} />
-          <Route path='*' element={<NotFound404 />} />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<PrivateOutlet />}>
+              {/* Private routes */}
+              <Route path='/' element={<Home />} />
+              <Route path='/criar-carona' element={<CreateCarpool />} />
+              <Route path='/mensagens' element={<Chat />} />
+            </Route>
+
+            {/* Public routes */}
+            <Route path='/login' element={<SessionTest />} />
+            <Route path='/criar-conta' element={<CreateAccount />} />
+            <Route path='/ws' element={<TestWebsocket />} />
+            <Route path='*' element={<NotFound404 />} />
+          </Routes>
+        </>
       </UserProvider>
     </BrowserRouter>
   )
