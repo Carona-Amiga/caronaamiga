@@ -1,4 +1,3 @@
-import json
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -430,17 +429,6 @@ class RecentDriversView(APIView):
         return Response(drivers_with_details, status=status.HTTP_200_OK)
 
 
-class UserMessageConsumer(ListModelMixin,
-                          RetrieveModelMixin,
-                          PatchModelMixin,
-                          UpdateModelMixin,
-                          CreateModelMixin,
-                          DeleteModelMixin,
-                          GenericAsyncAPIConsumer):
-    queryset = UserMessage.objects.all()
-    serializer_class = UserMessageSerializer
-
-
 class ChatConsumer(JsonWebsocketConsumer):
 
     def __init__(self, *args, **kwargs):
@@ -458,11 +446,10 @@ class ChatConsumer(JsonWebsocketConsumer):
         self.room_name = f"{user_id}_{secondary_user_id}"
         self.room_group_name = 'chat_%s' % self.room_name
 
-
         async_to_sync(self.channel_layer.group_add)(
             self.room_group_name, self.channel_name
         )
-    
+
         self.accept()
 
     def disconnect(self, code):
@@ -476,7 +463,6 @@ class ChatConsumer(JsonWebsocketConsumer):
 
     def list_message_group(self, event):
         self.send_json(event["content"])
-        
 
     def receive_json(self, content, **kwargs):
         message_type = content["type"]
@@ -517,12 +503,6 @@ class ChatConsumer(JsonWebsocketConsumer):
                     }
                 }
             )
-
-            # self.send_json({
-            #     "type": "list-messages",
-            #     "data": serializer.data
-            # })
-
         elif message_type == "list-messages":
             id = content["user_id"]
 
