@@ -9,7 +9,8 @@ import { Header } from '../../components/Header'
 import { api } from '../../utils/api'
 
 import {
-  Container, MessageDetails,
+  Container,
+  MessageDetails,
   UserItem,
   UserList,
   Button,
