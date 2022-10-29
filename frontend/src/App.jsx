@@ -22,11 +22,7 @@ function App () {
     <BrowserRouter>
       <UserProvider>
         <>
-          <ToastContainer
-            autoClose={3000}
-            position='top-right'
-            pauseOnFocusLoss={false}
-          />
+          <ToastContainer autoClose={3000} position='top-right' pauseOnFocusLoss={false} />
 
           <Routes>
             <Route path='/' element={<PrivateOutlet />}>
