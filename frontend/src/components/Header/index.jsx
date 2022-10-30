@@ -1,31 +1,13 @@
 import React from 'react'
 import { Nav, Navbar, Container, NavDropdown, Form } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../../hooks/useAuth'
-import { getTokenInLS, removeTokenInLS, removeUserInLS } from '../../utils/auth'
-import { api } from '../../utils/api'
 
 import logo from '../../images/Vector.svg'
 import iconUser from '../../images/Group.svg'
 
 export function Header () {
-  const navigate = useNavigate()
-  const { user } = useAuth()
-
-  const logoutEvent = () => {
-    const token = getTokenInLS()
-
-    api.post('/logout', {}, {
-      headers: {
-        Authorization: `Token ${token}`
-      }
-    }).then(() => {
-      removeTokenInLS()
-      removeUserInLS()
-      navigate('/login')
-    })
-  }
+  const { user, logout } = useAuth()
 
   return (
     <div className='navbar-s'>
@@ -74,7 +56,7 @@ export function Header () {
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   className='navDropdown-item'
-                  onClick={() => logoutEvent()}
+                  onClick={() => logout()}
                 >
                   Sair
                 </NavDropdown.Item>

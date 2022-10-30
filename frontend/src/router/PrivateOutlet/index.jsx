@@ -1,10 +1,11 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-
-import { isTokenNullInLS } from '../../utils/auth'
+import { useAuth } from '../../hooks/useAuth'
 
 function PrivateOutlet () {
-  return isTokenNullInLS()
+  const { isAuthenticated, token } = useAuth()
+
+  return isAuthenticated && !!token
     ? <Outlet />
     : <Navigate to='/login' />
 }

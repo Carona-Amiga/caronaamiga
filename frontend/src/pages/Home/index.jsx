@@ -38,15 +38,15 @@ function Home () {
     return drivers
   }
 
-  useEffect(() => {
-    fetchCaronas().then((carpools) => {
-      setRecemCriadaCaronas(carpools)
-    })
-
-    fetchDrivers().then((drivers) => {
-      setNeverDrivers(drivers)
-    })
-  }, [])
+  // useEffect(() => {
+  //   fetchCaronas().then((carpools) => {
+  //     setRecemCriadaCaronas(carpools)
+  //   })
+  //
+  //   fetchDrivers().then((drivers) => {
+  //     setNeverDrivers(drivers)
+  //   })
+  // }, [])
 
   return (
     <div className='App'>

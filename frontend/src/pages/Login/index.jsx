@@ -8,43 +8,27 @@ import { ToastContainer, toast } from 'react-toastify'
 
 import { api } from '../../utils/api'
 import {
-  setTokenInLS,
-  getTokenInLS,
-  setUserInLS,
-  getUserInLS
+  setTokenInLS, setUserInLS
 } from '../../utils/auth'
 
 function SessionTest () {
-  const { setUser } = useAuth()
+  const { setUser, isAuthenticated, setToken } = useAuth()
   const [remember, setRemember] = useState(false)
 
   const [userForm, setUserForm] = useState({ username: '', password: '' })
-  const [token, setToken] = useState('')
+  // const [token, setToken] = useState('')
   const navigate = useNavigate()
 
   useEffect(() => {
-    const tokenLocalStorage = getTokenInLS()
-
-    if (tokenLocalStorage) {
-      setToken(tokenLocalStorage)
-
-      const usernameLocalStorage = getUserInLS()
-      setToken(usernameLocalStorage)
-
-      const loggedInUser = getUserInLS()
-
-      if (loggedInUser) {
-        setUser(JSON.parse(loggedInUser))
-
-        navigate('/')
-      }
+    if (isAuthenticated) {
+      navigate('/')
     }
-  }, [])
+  }, [isAuthenticated])
 
   const loginSubmit = event => {
     event.preventDefault()
 
-    if (token) {
+    if (isAuthenticated) {
       return
     }
 
@@ -55,19 +39,17 @@ function SessionTest () {
         }
       })
       .then(async response => {
-        const { data } = response
+        const { token } = response.data
 
         const { data: user } = await api.get('/session', {
-          headers: {
-            Authorization: `Token ${data.token}`
-          }
+          headers: { Authorization: `Token ${token}` }
         })
 
         setUser(user)
         setUserInLS(JSON.stringify({ id: user.id, username: user.username }))
 
-        setToken(data.token)
-        setTokenInLS(data.token)
+        setToken(token)
+        setTokenInLS(token)
 
         navigate('/')
       })
