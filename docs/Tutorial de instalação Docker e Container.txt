@@ -1,6 +1,6 @@
 Comandos da instalação do Docker:
 
-1.  C:\Users\20181014040004\Downloads\VM_key.pem azureuser@20.115.42.175 (permissões para acessar a máquina virtual)
+1.  ssh -i C:\Users\20181014040004\Downloads\VM_key.pem azureuser@20.115.42.175 (permissões para acessar a máquina virtual)
 2.  curl -sSL https://get.docker.com | sh  (instalação do docker)
 3.  docker -v (versão do docker)
 3.1 docker pull alpine (versão mais leve do docker)
