@@ -4,6 +4,6 @@ Cronograma do projeto Carona Amiga com data, gerente, tarefas, status e tarefas 
 
 |     ID    | Data        | Gerente | Tarefas | Status | Tarefas não concluídas |
 |:---------:|:------------|:--------|:--------|:-------|:-----------------------|
-| Sprint 01 | 25/10/2022  |    -    | Documento de Registro de partes interessadas, Documento de cronograma, Documento de EAP | Em andamento | - |
-| Sprint 02 | 01/11/2022  |    -    |    -    |    -   |            -           |
-| Sprint 03 | 08/11/2022  |    -    |    -    |    -   |            -           |
+| Sprint 01 | 25/10/2022  | Matheus Oliveira | Documento de Registro de partes interessadas, Documento de cronograma, Documento de EAP | Em andamento | - |
+| Sprint 01 | 01/11/2022  | Matheus Oliveira | Documento de Registro de partes interessadas, Documento de cronograma, Documento de EAP |    -   |            -           |
+| Sprint 02 | 08/11/2022  |    -    |    -    |    -   |            -           |
