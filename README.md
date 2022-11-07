@@ -2,7 +2,7 @@
 
 <img src="logo.png" width="200" height="200" />
 
->Inserir pequena descrição do projeto
+> Projeto associado ao IFRN de uma aplicação com o intuito de fornecer carona.
 
 # Pull Request
 
