@@ -29,8 +29,11 @@ Crie um ambiente virtual com virtualenv:
 # Cria o ambiente virtual
 virtualenv env
 
-# Ative o ambiente o virtual
+# Ative o ambiente o virtual no Linux
 source env/bin/activate
+
+# Ative o ambiente o virtual no Windows
+source env/Scripts/activate
 ```
 Obs.: Dependendo do seu sistema operacional ou como foi instalado o ```virtualenv``` o comando pode ser diferente.
 
