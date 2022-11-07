@@ -7,7 +7,11 @@
 
 ## Instalar tudo
  ```r
+ #Instalação padrão
  npm install
+ 
+ #Forçar instalação
+ npm install --force
  ```
 
 ## Configurar variáveis de ambiente
