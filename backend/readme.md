@@ -24,7 +24,7 @@ git clone https://github.com/Carona-Amiga/caronaamiga.git
 cd caronaamiga/backend
 ```  
 
-Crie um ambiente virtual com virtualenv:
+Crie um ambiente virtual com virtualenv: (Obs: virtualenv já instalado)
 ```bash
 # Cria o ambiente virtual
 virtualenv env
