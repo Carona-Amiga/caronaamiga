@@ -77,10 +77,16 @@ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' caro
 Execute a migração do banco de dados:
 ```bash
 python3 manage.py migrate
+
+#ou
+python manage.py migrate
 ```
 
 Para executar o servidor:
 ```bash
+python3 manage.py runserver
+
+#ou
 python3 manage.py runserver
 ```
 
