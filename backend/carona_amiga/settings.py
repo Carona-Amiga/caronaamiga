@@ -76,7 +76,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    'https://felipesousarocha-miniature-pancake-rxr5xr46xgxfp457-3000.preview.app.github.dev',
 ]
 
 
