@@ -104,6 +104,7 @@ function SessionTest () {
                     className='form-control'
                     name='password'
                     id='password'
+                    autoComplete='on'
                     placeholder='********'
                     onChange={(event) =>
                       setUserForm({
