@@ -7,9 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer, toast } from 'react-toastify'
 
 import { api } from '../../utils/api'
-import {
-  setTokenInLS, setUserInLS
-} from '../../utils/auth'
+import { setTokenInLS, setUserInLS } from '../../utils/auth'
 
 function SessionTest () {
   const { setUser, isAuthenticated, setToken } = useAuth()
@@ -25,7 +23,7 @@ function SessionTest () {
     }
   }, [isAuthenticated])
 
-  const loginSubmit = event => {
+  const loginSubmit = (event) => {
     event.preventDefault()
 
     if (isAuthenticated) {
@@ -38,7 +36,7 @@ function SessionTest () {
           'Content-Type': 'application/json'
         }
       })
-      .then(async response => {
+      .then(async (response) => {
         const { token } = response.data
 
         const { data: user } = await api.get('/session', {
@@ -51,12 +49,12 @@ function SessionTest () {
         setToken(token)
         setTokenInLS(token)
 
-        navigate('/')
+        navigate(0)
       })
       .catch(() => toast.error('Usuário ou senha incorretos.'))
   }
 
-  const goToCreateAccountPage = event => {
+  const goToCreateAccountPage = (event) => {
     event.preventDefault()
 
     navigate('/criar-conta')
@@ -93,14 +91,13 @@ function SessionTest () {
                     id='email'
                     name='email'
                     placeholder='matheusinit'
-                    onChange={event =>
+                    onChange={(event) =>
                       setUserForm({ ...userForm, username: event.target.value })
                     }
                   />
                 </div>
 
                 <div className='password mb-3'>
-
                   <label className='font-bold'>Senha</label>
                   <input
                     type='password'
@@ -108,7 +105,7 @@ function SessionTest () {
                     name='password'
                     id='password'
                     placeholder='********'
-                    onChange={event =>
+                    onChange={(event) =>
                       setUserForm({
                         ...userForm,
                         password: event.target.value
@@ -126,7 +123,7 @@ function SessionTest () {
                           type='checkbox'
                           id='remember'
                           checked={remember}
-                          onChange={e => setRemember(e.currentTarget.checked)}
+                          onChange={(e) => setRemember(e.currentTarget.checked)}
                         />
                         <label className='form-check-label' htmlFor='remember'>
                           Lembrar
@@ -152,8 +149,12 @@ function SessionTest () {
 
               <br />
               <div className='buttonFlex'>
-                <a className='button-createaccount' onClick={goToCreateAccountPage}>
-                  Não possui conta?  <span className='text-createaccount'> Cadastre-se</span>
+                <a
+                  className='button-createaccount'
+                  onClick={goToCreateAccountPage}
+                >
+                  Não possui conta?{' '}
+                  <span className='text-createaccount'> Cadastre-se</span>
                 </a>
               </div>
             </div>
