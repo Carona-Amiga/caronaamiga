@@ -32,20 +32,24 @@ function Chat () {
   const [messagesListed, setMessagesListed] = useState([])
   const [busy, setBusy] = useState(false)
 
-  const { sendJsonMessage } = useWebSocket(`ws://localhost:8000/${user.id > selectedUser?.id ? user.id : selectedUser?.id}/${user.id > selectedUser?.id ? selectedUser?.id : user.id}`, {
-    onMessage: (event) => {
-      const data = JSON.parse(event.data)
-      console.log(data)
-      switch (data.type) {
-      case 'list-messages':
-        setMessagesListed([...data.data])
-        break
-      default:
-        console.error('Unknown message type!')
-        break
+  const { sendJsonMessage } = useWebSocket(
+    `ws://localhost:8000/${
+      user.id > selectedUser?.id ? user.id : selectedUser?.id ?? 0
+    }/${user.id > selectedUser?.id ? selectedUser?.id ?? 0 : user.id}`,
+    {
+      onMessage: (event) => {
+        const data = JSON.parse(event.data)
+        switch (data.type) {
+        case 'list-messages':
+          setMessagesListed([...data.data])
+          break
+        default:
+          console.error('Unknown message type!')
+          break
+        }
       }
     }
-  })
+  )
 
   useEffect(() => {
     const token = getTokenInLS()
