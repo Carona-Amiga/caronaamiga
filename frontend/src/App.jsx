@@ -12,7 +12,7 @@ import Chat from './pages/Chat'
 import PrivateOutlet from './router/PrivateOutlet'
 
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-toastify/dist/ReactToastify.min.css'
 import { NotFound404 } from './pages/NotFound404'
 import { TestWebsocket } from './pages/Test'
 import { CreateAccount } from './pages/CreateAccount'
