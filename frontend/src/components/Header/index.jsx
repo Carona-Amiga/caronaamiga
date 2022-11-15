@@ -26,7 +26,7 @@ export function Header () {
               style={{ maxHeight: '100px' }}
               navbarScroll
             ></Nav>
-            <NavDropdown.Item href='' className='nresponse'>
+            <NavDropdown.Item href='/mensagens' className='nresponse'>
               <p>Mensagens</p>
             </NavDropdown.Item>
             <NavDropdown.Item href='' className='nresponse'>
