@@ -70,7 +70,6 @@ body {
 }
 
 @media screen and (min-width: 990px) {
-
   .nresponse,
   .nresponse:hover,
   .navbar-s p {
@@ -198,11 +197,11 @@ div.profile {
   margin-top: -10px;
 }
 
-.search-bar .row>div:not(:last-child) {
+.search-bar .row > div:not(:last-child) {
   position: relative;
 }
 
-.search-bar .row>div:not(:last-child)::after {
+.search-bar .row > div:not(:last-child)::after {
   content: '';
 
   height: 63%;
@@ -242,13 +241,13 @@ div.input:not(:last-child) {
   margin-bottom: 1em;
 }
 
-div.input>label,
-div.input>span {
+div.input > label,
+div.input > span {
   font-weight: 500;
 }
 
-div.input>input,
-div.input>div.edit-input input {
+div.input > input,
+div.input > div.edit-input input {
   border: 2px solid #ccc;
   height: 45px;
 }

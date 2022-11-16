@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, Navbar, Container, NavDropdown, Form } from 'react-bootstrap'
+import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 
 import { useAuth } from '../../hooks/useAuth'
 
@@ -28,16 +28,19 @@ export function Header () {
             >
 
             </Nav>
-            <NavDropdown.Item href='' className='nresponse'>
+            <NavDropdown.Item href='/chat' className='nresponse'>
               <p>Mensagens</p>
             </NavDropdown.Item>
-            <NavDropdown.Item href='' className='nresponse'>
+            <NavDropdown.Item href='/criar-carona' className='nresponse'>
               <p>Carona</p>
             </NavDropdown.Item>
-            <NavDropdown.Item href='' className='nresponse'>
+            <NavDropdown.Item
+              className='nresponse'
+              onClick={() => logout()}
+            >
               <p>Sair</p>
             </NavDropdown.Item>
-            <Form className='d-flex'>
+            <Nav className='d-flex'>
               <NavDropdown
                 title={user.username}
                 id='navbarScrollingDropdown'
@@ -62,7 +65,7 @@ export function Header () {
                 </NavDropdown.Item>
               </NavDropdown>
               <img className='imgUser' src={iconUser} alt='icone'></img>
-            </Form>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
