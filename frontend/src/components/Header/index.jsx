@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, Navbar, Container, NavDropdown, Form } from 'react-bootstrap'
+import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 
 import { useAuth } from '../../hooks/useAuth'
 
@@ -25,9 +25,7 @@ export function Header () {
               className='me-auto my-2 my-lg-0'
               style={{ maxHeight: '100px' }}
               navbarScroll
-            >
-
-            </Nav>
+            ></Nav>
             <NavDropdown.Item href='' className='nresponse'>
               <p>Mensagens</p>
             </NavDropdown.Item>
@@ -37,15 +35,9 @@ export function Header () {
             <NavDropdown.Item href='' className='nresponse'>
               <p>Sair</p>
             </NavDropdown.Item>
-            <Form className='d-flex'>
-              <NavDropdown
-                title={user.username}
-                id='navbarScrollingDropdown'
-              >
-                <NavDropdown.Item
-                  href='/chat'
-                  className='navDropdown-item'
-                >
+            <div className='d-flex'>
+              <NavDropdown title={user.username} id='navbarScrollingDropdown'>
+                <NavDropdown.Item href='/chat' className='navDropdown-item'>
                   Mensagens
                 </NavDropdown.Item>
                 <NavDropdown.Item
@@ -62,7 +54,7 @@ export function Header () {
                 </NavDropdown.Item>
               </NavDropdown>
               <img className='imgUser' src={iconUser} alt='icone'></img>
-            </Form>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
