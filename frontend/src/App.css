@@ -295,3 +295,8 @@ input[type='time'] {
   cursor: pointer;
   transition: ease-in-out;
 }
+
+.navbar-s .dropdown-menu {
+  left: auto !important;
+  right: 0 !important;
+}
