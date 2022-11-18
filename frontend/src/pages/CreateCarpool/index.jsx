@@ -13,6 +13,8 @@ import { Legend, StyledContainer } from './styled'
 import { api } from '../../utils/api'
 import NumberField from '../../components/NumberField'
 
+import { useForm } from "react-hook-form"
+
 function CreateCarpool () {
   const formInitialState = {
     name: '',
