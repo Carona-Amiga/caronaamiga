@@ -41,6 +41,7 @@ body {
 
 #navbarScrollingDropdown {
   color: white !important;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 990px) {
