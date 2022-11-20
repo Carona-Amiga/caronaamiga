@@ -79,7 +79,7 @@ Execute a migração do banco de dados:
 python3 manage.py migrate
 
 #ou
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 Para executar o servidor:
