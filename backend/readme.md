@@ -87,7 +87,7 @@ Para executar o servidor:
 python3 manage.py runserver
 
 #ou
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 O projeto estará rodando em `locahost:8000`
