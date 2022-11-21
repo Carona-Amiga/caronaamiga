@@ -1,20 +1,21 @@
-# [DCDU] Editar Carona
+# [DCDU] Adicionar passageiros ao grupo de carona
 ## Especificação de caso de uso
 
 Histórico de revisão
 
 | Data | Versão | Descrição | Autor |
 |--|--|--|--|
-| 11/2022 | 1.0 | Criação de "Adicionar passageiro ao grupo de carona" | Jackson Ricardo |
+| 11/2022 | 1.0 | Criação de "Adicionar passageiro a darona" | Jackson Ricardo |
 
 
 ## Resumo
+No caso de uso **"Adicionar passageiros ao grupo de carona**" o ator motorista irá criar um grupo denominado de forma geral no projeto como “carona”, onde poderá colocar informações sobre a carona e torná-las públicas para outros usuários do sistema Carona Amiga.
 
 ## Atores
+Motorista
 
 ## Pré-condições
-
-
+- O motorista deve estar logado no sistema
 
 ## Pós-condições
 
