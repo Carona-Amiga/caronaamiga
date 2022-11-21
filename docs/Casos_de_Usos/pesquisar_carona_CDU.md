@@ -9,7 +9,7 @@ Histórico de revisão
 
 
 ## Resumo
-No caso de uso "Pesquisar Carona" o ator Passageiro ou Motorista irá pesquisar por uma carona, com base nos filtros estabelecidos por ele mesmo.
+No caso de uso "Pesquisar Carona", o ator Passageiro ou Motorista irá pesquisar por uma carona, com base nos filtros estabelecidos por ele mesmo.
 
 ## Atores
 Passageiro ou Motorista
@@ -32,7 +32,7 @@ O usuário descobrirá todas as caronas que estiverem disponíveis com base em s
 ### Fluxo de erro - Sistema não consegue exibir resultado 
 Após o passo 3 do fluxo básico
 
- 1. Sistema por algum motivo não consegue acessar os dados das caronas no banco de dados e exibe mensagem de erro: "Não conseguimos exibir resultados no momento. Por favor, tente mais tarde".
+ 1. Sistema por algum motivo não consegue acessar os dados das caronas no banco de dados, e exibe mensagem de erro: "Não conseguimos exibir resultados no momento. Por favor, tente mais tarde".
 
 ### Fluxo alternativo - Sistema não possui resultados com base nos filtros
 
