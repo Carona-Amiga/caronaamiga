@@ -6,6 +6,7 @@ Histórico de revisão
 | Data | Versão | Descrição | Autor |
 |--|--|--|--|
 | 01/2021 | 1.0 | Criação de "Editar Carona" | Mozart Maia |
+| 11/2022 | 1.0 | Atualizando de "Editar Carona" | Jackson Ricardo |
 
 
 ## Resumo
