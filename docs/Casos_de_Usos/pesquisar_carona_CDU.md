@@ -6,6 +6,7 @@ Histórico de revisão
 | Data | Versão | Descrição | Autor |
 |--|--|--|--|
 | 01/2021 | 1.0 | Criação de "Pesquisar Carona" | Mozart Maia |
+| 11/2021 | 1.0 | Atualizando "Pesquisar Carona" | Jackson Ricardo |
 
 
 ## Resumo
