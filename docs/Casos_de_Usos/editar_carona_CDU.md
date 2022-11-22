@@ -42,7 +42,7 @@ Após o passo 6 do fluxo básico
 
 Em qualquer momento após o passo 4 do fluxo básico
 
- 1. Motorista clica em botão "Apagar"
+ 1. Motorista clica no botão "Apagar"
  2. Sistema exibe pop-up com pergunta: "Realmente deseja apagar a carona? Os dados sobre a carona não estarão mais disponíveis"
  3. Motorista clica no botão "Sim"
  4. Sistema atualiza a carona para indisponível no banco de dados
