@@ -9,7 +9,7 @@ Histórico de revisão
 
 
 ## Resumo
-No caso de uso **"Adicionar passageiros ao grupo de carona**", o ator motorista irá criar um grupo na plataforma”, onde poderá manter contato com os usuários dos sistema Carona Amiga com informaçães sobre corridas, a comunicação poderá ser feita pela plataforma. 
+No caso de uso **"Adicionar passageiros ao grupo de carona**", o ator motorista irá criar um grupo na plataforma”, onde poderá manter contato com os usuários dos sistema Carona Amiga, com informaçães sobre as corridas, a comunicação poderá ser feita pela plataforma. 
 
 ## Atores
 Passageiro e motorista
@@ -30,7 +30,7 @@ Passageiro e motorista
 
 ### Fluxo de erro - Sistema não consegue salvar as informações 
 Após o passo 2 do fluxo básico
-- Sistema não finalizar a criação do grupo, e exibe mensagem de erro: "Não foi possível efetuar esta operação, verifique a sua conexão com a internet ou tente mais tarde".
+- Sistema não finalizar a criação do grupo, e exibe mensagem de erro: "Não foi possível efetuar esta operação, por favor, verifique a sua conexão com a internet ou tente mais tarde".
 
 ### Fluxo alternativo - Motorista deleta grupo de carona
 Em qualquer momento após o passo 3 do fluxo básico
