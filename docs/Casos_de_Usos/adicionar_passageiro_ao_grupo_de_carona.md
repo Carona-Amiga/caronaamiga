@@ -9,7 +9,7 @@ Histórico de revisão
 
 
 ## Resumo
-No caso de uso **"Adicionar passageiros ao grupo de carona**", o ator motorista irá criar um grupo na plataforma”, onde poderá manter contato com os usuários dos sistema Carona Amiga, com informaçães sobre as corridas, a comunicação poderá ser feita pela plataforma. 
+No caso de uso **"Adicionar passageiros ao grupo de carona**", o ator motorista irá criar um grupo na plataforma”, onde poderá manter contato com os usuários dos sistema Carona Amiga, com informaçães sobre as corridas, e a comunicação poderá ser feita pela plataforma. 
 
 ## Atores
 Passageiro e motorista
