@@ -24,9 +24,10 @@ Passageiro e motorista
 
 ## Fluxo de evento
 ### Fluxo básico
-1. Motorista clica na conversa iniciada pelo usuário do Carona.
-2. Dentro da conversa, o motorista clica no botão "Criar grupo de conversas".
-3. Sistema informa que o grupo de Caronas foram criadas com sucesso e exibe a tela dos grupos de conversas que já foram criados.
+1. Motorista clica na conversa iniciada pelos os usuários do Carona.
+2. Motorista seleciona todas as conversas que desejar para criar o grupo.
+3. Sistema exibe o botão "Criar grupo de conversas", no canto superior, e o motorista clica no botão.
+4. Sistema informa que o grupo de Caronas foram criadas com sucesso e exibe a tela dos grupos de conversas que já foram criados.
 
 ### Fluxo de erro - Sistema não consegue salvar as informações 
 Após o passo 2 do fluxo básico
