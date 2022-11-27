@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { SendFilled } from '@fluentui/react-icons'
+import { toast } from 'react-toastify'
+import useWebSocket from 'react-use-websocket'
+import ScrollToBottom from 'react-scroll-to-bottom'
 
 import { getFormatedTime } from './functions'
 import { Header } from '../../components/Header'
 import { api } from '../../utils/api'
 
 import {
-  Container, MessageDetails,
+  Container,
+  MessageDetails,
   UserItem,
   UserList,
   Button,
@@ -20,12 +24,32 @@ import { useAuth } from '../../hooks/useAuth'
 import { getTokenInLS } from '../../utils/auth'
 
 function Chat () {
+  const { user } = useAuth()
+
   const [messageInput, setMessageInput] = useState('')
   const [chatUsers, setChatUsers] = useState([])
   const [selectedUser, setSelectedUser] = useState(null)
   const [messagesListed, setMessagesListed] = useState([])
   const [busy, setBusy] = useState(false)
-  const { user } = useAuth()
+
+  const { sendJsonMessage } = useWebSocket(
+    `ws://localhost:8000/${
+      user.id > selectedUser?.id ? user.id : selectedUser?.id ?? 0
+    }/${user.id > selectedUser?.id ? selectedUser?.id ?? 0 : user.id}`,
+    {
+      onMessage: (event) => {
+        const data = JSON.parse(event.data)
+        switch (data.type) {
+        case 'list-messages':
+          setMessagesListed([...data.data])
+          break
+        default:
+          console.error('Unknown message type!')
+          break
+        }
+      }
+    }
+  )
 
   useEffect(() => {
     const token = getTokenInLS()
@@ -78,27 +102,26 @@ function Chat () {
     setBusy(true)
   }
 
-  async function onSubmit (event) {
+  const sendMessage = event => {
     event.preventDefault()
 
+    if (messageInput === '') {
+      toast.error('Nenhuma mensagem digitada')
+      return
+    }
+
     try {
-      const formData = {
-        content: messageInput,
-        receiver: selectedUser.id,
+      sendJsonMessage({
+        type: 'create-message',
+        message: messageInput,
         sender: user.id,
+        receiver: selectedUser.id,
         carpool: selectedUser.carpool.id
-      }
-
-      const token = getTokenInLS()
-
-      await api.post('/user-message', formData, {
-        headers: {
-          Authorization: `Token ${token}`
-        }
       })
 
-      location.reload()
+      setMessageInput('')
     } catch (err) {
+      toast.error('Um erro ocorreu!')
       console.log(err)
     }
   }
@@ -144,7 +167,7 @@ function Chat () {
                 </div>
 
                 <div className='chat'>
-                  <div className='chat-history'>
+                  <ScrollToBottom className='chat-history'>
                     {messagesListed.map(message => (
                       <Message key={message.id} sent={message.sender.id === user.id}>
                         <div className='info'>
@@ -161,11 +184,17 @@ function Chat () {
                         </div>
                       </Message>
                     ))}
-                  </div>
+                  </ScrollToBottom>
 
                   {/* Message input */}
-                  <MessageInput onSubmit={onSubmit}>
-                    <input type='text' name='message' onChange={onChange} />
+                  <MessageInput onSubmit={sendMessage}>
+                    <input
+                      type='text'
+                      name='message'
+                      onChange={onChange}
+                      value={messageInput}
+                      placeholder='Digite a mensagem'
+                    />
                     <button type='submit'>
                       <SendFilled fontSize='25px' color='#606060' />
                     </button>

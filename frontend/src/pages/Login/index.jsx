@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 import '../../assets/scss/auth.scss'
-import 'react-toastify/dist/ReactToastify.css'
 
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 import { api } from '../../utils/api'
 import { setTokenInLS, setUserInLS } from '../../utils/auth'
@@ -71,12 +70,6 @@ function SessionTest () {
         <div className='d-flex flex-column align-content-end justify-content-center h-100'>
           <div className='auth-body mx-auto'>
             <div className='auth-form-container text-start'>
-              <ToastContainer
-                autoClose={3000}
-                position='top-right'
-                pauseOnFocusLoss={false}
-              />
-
               <form
                 className='auth-form'
                 method='POST'

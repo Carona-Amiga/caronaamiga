@@ -114,9 +114,10 @@ export const MessageDetails = styled.div`
 
   .chat {
     flex: 1;
+    height: 90%;
     padding: 1em;
     background-color: transparent;
-    
+
     flex-direction: column;
     display: flex;
     
@@ -124,11 +125,16 @@ export const MessageDetails = styled.div`
       flex: 1;
       margin-bottom: 1em;
 
+      overflow-y: auto;
+
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      
-      padding: 1em 0 0;
+
+      padding: 1em 0.75em 0 0;
+
+      & > div {
+        padding-right: 1em;
+      }
     }
   }
 `

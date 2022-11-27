@@ -26,7 +26,7 @@ export function Header () {
               style={{ maxHeight: '100px' }}
               navbarScroll
             ></Nav>
-            <NavDropdown.Item href='' className='nresponse'>
+            <NavDropdown.Item href='/mensagens' className='nresponse'>
               <p>Mensagens</p>
             </NavDropdown.Item>
             <NavDropdown.Item href='' className='nresponse'>
@@ -37,7 +37,10 @@ export function Header () {
             </NavDropdown.Item>
             <div className='d-flex'>
               <NavDropdown title={user.username} id='navbarScrollingDropdown'>
-                <NavDropdown.Item href='/chat' className='navDropdown-item'>
+                <NavDropdown.Item
+                  href='/mensagens'
+                  className='navDropdown-item'
+                >
                   Mensagens
                 </NavDropdown.Item>
                 <NavDropdown.Item

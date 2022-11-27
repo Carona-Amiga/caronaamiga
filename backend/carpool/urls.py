@@ -17,7 +17,8 @@ schema_view = get_schema_view(
 )
 
 websocket_urlpatterns = [
-    path('', views.ChatConsumer.as_asgi())
+    path('<int:user_id>/<int:secondary_user_id>',
+         views.ChatConsumer.as_asgi())
 ]
 
 urlpatterns = [
