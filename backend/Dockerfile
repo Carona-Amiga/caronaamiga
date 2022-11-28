@@ -1,16 +1,15 @@
-FROM python:3.8.10-alpine
+FROM python:3.8.10
 
-RUN apk update
-RUN apk add postgresql-dev 
-RUN apk add --no-cache gcc musl-dev python3-dev alpine-sdk libffi-dev openssl-dev cargo jpeg-dev zlib-dev  ffmpeg
+ENV PYTHONUNBUFFERED=1
 
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
 WORKDIR /code
-ADD requirements.txt /code/
+
+COPY requirements.txt .
+
 RUN pip install -r requirements.txt
-ADD . /code/
+
+COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"] 
+cmd ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
