@@ -1,4 +1,5 @@
-IMAGE_NAME=matheusinit/server:1.0
+VERSION ?= 1.1
+IMAGE_NAME=matheusinit/server:$(VERSION)
 CONTAINER_NAME=caronaamiga_server
 
 install:
