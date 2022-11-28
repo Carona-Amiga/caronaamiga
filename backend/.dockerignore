@@ -1,0 +1,12 @@
+# Environment variables
+.env
+.env.sample
+
+# Git
+.gitignore
+
+# Markdown files
+*.md
+
+# Venv
+env
