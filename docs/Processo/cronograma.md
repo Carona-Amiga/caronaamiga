@@ -6,8 +6,9 @@ Cronograma do projeto Carona Amiga com data, data final, gerente, tarefa, status
 |:---------:|:------------    |:------------ |:------------ |:--------|:--------|:-------|:----------:|:--------|:--------|:--------|:--------|
 |Sprint 01| Registro de partes interessadas | Revisão e planjemanto  | Pedro e Felipe | Matheus Oliveira | 25/10/2022 | 15 dias |01/11/2022|01/11/2022|Matriz de Poder vs Interesse, Matriz de Influência vs Impacto vs Poder vs Interesse| R$389,60 | Concluído| 
 |Sprint 01| Documento de cronograma | Revisão e planjemanto  | Matheus e Jackson | Matheus Oliveira | 25/10/2022 | 15 dias |01/11/2022|01/11/2022|5W2H| R$389,60 |Concluído |  
-|Sprint 01| Documento de EAP | Revisão e planjemanto  | Matheus | Matheus Oliveira | 25/10/2022 | 15 dias |01/11/2022 | 01/11/2022 |Fluxogramas no formato de árvores|   R$389,60 |Concluído|  
+|Sprint 01| Documento de EAP | Revisão e planjemanto  | Matheus | Matheus Oliveira | 25/10/2022 | 15 dias |01/11/2022 | 01/11/2022 |Fluxogramas no formato de árvores|  R$389,60 |Concluído|  
 |Sprint 02| Corrigir EAP| Para organizar o escopo do projeto de forma visual| Pedro | Felipe Rocha | 01/11/2022 | 15 dias |15/11/2022|08/11/2022|Cadastrar usuário repetido, contemplar containerização| R$389,60 |Concluído|
+|Sprint 02| Melhorias no front| Visual e usabilidade do projeto| Felipe e Matheus | Felipe Rocha | 01/11/2022 | 15 dias |15/11/2022|08/11/2022|Tecnlogias Front-ed| R$389,60 |Concluído|
 |Sprint 02| Atualização do cronograma |Para organizar as sprints, manter o controle de gerenciamento de tarefas e pessoas| Matheus e Jackson | Felipe Rocha | 01/11/2022 | 15 dias |15/11/2022|08/11/2022|5W2H| R$194,80 |Concluído|
 |Sprint 02| Revisar caso de uso principal (Adicionar passageiro a carona)|Melhoria do CDU principal|Jackson Ricardo| Felipe Rocha | 01/11/2022 | 15 dias |15/11/2022|15/11/2022|Criação do novo CDU| R$194,80 |Concluído|
 |Sprint 02| Revisar caso de uso principal (Enviar mensagem ao motorista)|Melhoria do CDU principal|Jackson Ricardo| Felipe Rocha | 01/11/2022 | 15 dias |15/11/2022|15/11/2022|Análise do CDU antigo| R$194,80 |Concluído|
