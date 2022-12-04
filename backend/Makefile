@@ -8,7 +8,7 @@ build:
 	docker build -t $(IMAGE_NAME) .
 
 up:
-	docker run -it -p 8000:8000 -d --net host --name $(CONTAINER_NAME) $(IMAGE_NAME)
+	sudo docker run -it -p 8000:8000 -d --net host --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 down:
 	docker rm -f $(CONTAINER_NAME)
