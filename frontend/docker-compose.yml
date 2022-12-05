@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  frontend:
+    image: matheusinit/frontend
+    container_name: caronaamiga_front
+    env_file:
+      - ./.env
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
+    ports:
+      - 80:3000
