@@ -1,17 +1,18 @@
-version: '3'
+version: '3.7'
 
 services:
-  # api:
-  #   build: ./
-  #   env_file:
-  #     - ./.env
-  #   environment:
-  #     - SECRET_KEY=${SECRET_KEY}
-  #   ports:
-  #     - "8000:8000"
-  #   depends_on:
-  #     database:
-  #       condition: service_healthy
+  api:
+    image: matheusinit/server:1.1
+    container_name: caronaamiga_server
+    env_file:
+      - ./.env
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+    ports:
+      - 8000:8000
+    depends_on:
+      database:
+        condition: service_healthy
 
   database:
     image: postgres:13-alpine
@@ -25,8 +26,12 @@ services:
     ports:
       - "5432:5432"
     restart: unless-stopped
-    # healthcheck:
-    #   test: [ "CMD", "pg_isready", "-q", "-d", "${DB_NAME}", "-U", "${DB_USER}" ]
-    #   timeout: 40s
-    #   interval: 2s
-    #   retries: 20
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "${DB_NAME}", "-U", "${DB_USER}" ]
+      timeout: 40s
+      interval: 2s
+<<<<<<< HEAD
+      retries: 20
+=======
+      retries: 20
+>>>>>>> 238df82 (update docker-compose.yml with api rest server image)

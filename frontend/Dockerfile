@@ -1,19 +1,22 @@
-FROM node:16-alpine
+FROM node:16-alpine as build-step-frontend
 
 RUN mkdir /code
 WORKDIR /code
 
 COPY . .
 
-#RUN npm install --global node-gyp
-
 RUN apk add --update python3 make g++\
    && rm -rf /var/cache/apk/*
 
 RUN npm install --force
 
-ENV VITE_API_URL 172.18.0.3
+RUN npm run build
 
-EXPOSE 8000
+FROM nginx
 
-CMD npm run dev
+COPY --from=build-step-frontend /code/dist /var/www
+COPY --from=build-step-frontend /code/nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
