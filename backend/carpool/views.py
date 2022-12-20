@@ -4,16 +4,8 @@ from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.permissions import IsAuthenticated
-from djangochannelsrestframework.mixins import (
-    ListModelMixin,
-    RetrieveModelMixin,
-    PatchModelMixin,
-    UpdateModelMixin,
-    CreateModelMixin,
-    DeleteModelMixin,
-)
-from djangochannelsrestframework.generics import GenericAsyncAPIConsumer
-from channels.generic.websocket import JsonWebsocketConsumer, AsyncJsonWebsocketConsumer
+
+from channels.generic.websocket import JsonWebsocketConsumer
 from asgiref.sync import async_to_sync
 
 from django.contrib.auth.models import User
@@ -255,6 +247,14 @@ class ProfileView(APIView):
                 {'error': message},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+    def delete(self, request):
+        Profile.objects.all().delete()
+        User.objects.all().delete()
+
+        return Response({
+            "message": "Users deleted with success"
+        }, status=status.HTTP_200_OK)
 
 
 class LogoutView(APIView):
