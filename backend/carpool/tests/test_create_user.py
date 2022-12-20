@@ -23,7 +23,7 @@ def api_request_context(
     request_context.dispose()
 
 
-def test_should_login_with_success(
+def test_should_create_user_with_success(
     api_request_context: APIRequestContext
 ) -> None:
     create_user_data = {

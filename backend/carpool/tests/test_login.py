@@ -25,8 +25,9 @@ def api_request_context(
     request_context.dispose()
 
 
-def test_should_login_with_success(api_request_context: APIRequestContext
-                                   ) -> None:
+def test_should_login_with_success(
+    api_request_context: APIRequestContext
+) -> None:
     create_user_data = {
         "name": "random-user",
         "cpf": "0000000000",
@@ -57,3 +58,28 @@ def clear_user_records(
     api_request_context.delete('user')
 
     yield
+
+
+def test_should_not_login_without_a_password(
+        api_request_context: APIRequestContext
+) -> None:
+    create_user_data = {
+        "name": "random-user",
+        "cpf": "0000000000",
+        "driver_license": "000000",
+        "phone_number": "000000000",
+        "email": "random-user@email.com",
+        "username": "test-user",
+        "bio": "test bio",
+        "password": "playwright"
+    }
+
+    api_request_context.post('user', data=create_user_data)
+
+    data = {
+        "username": "test-user",
+    }
+
+    token = api_request_context.post('api-token', data=data)
+
+    assert token.status == 400
