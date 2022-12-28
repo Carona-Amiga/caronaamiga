@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+import socket
 
 load_dotenv()
 
@@ -29,7 +30,13 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOST').split(',')
+hostname = socket.gethostname()
+local_ip = socket.gethostbyname(hostname)
+
+allowed_hosts = os.getenv('ALLOWED_HOSTS').split(',')
+allowed_hosts.append(local_ip)
+
+ALLOWED_HOSTS = allowed_hosts
 
 
 # Application definition
