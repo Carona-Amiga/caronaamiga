@@ -3,6 +3,9 @@ name: 'Deploy Backend'
 on:
   push:
     branches: [FelipeSousaRocha-patch-1]
+    paths: 
+      - './backend/**'
+      - '.github/workflows/backendBuild.yml'
 jobs: 
   CI: 
     runs-on: ubuntu-latest
