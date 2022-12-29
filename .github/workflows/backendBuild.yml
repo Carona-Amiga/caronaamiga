@@ -33,4 +33,4 @@ jobs:
             
       - name: Deploy Docker images
         run: |
-          ls
+          ls .
