@@ -30,3 +30,7 @@ jobs:
           tags: |
             matheusinit/build-back:v1
             matheusinit/build-back:latest
+            
+      - name: Deploy Docker images
+        run: |
+          ls
