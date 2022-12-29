@@ -6,6 +6,8 @@ on:
     paths:
       - './frontend/**'
       - '.github/workflows/frontedBuild.yml'
+    paths-ignore:
+      - 'docs/**'
 jobs: 
   CI: 
     runs-on: ubuntu-latest
