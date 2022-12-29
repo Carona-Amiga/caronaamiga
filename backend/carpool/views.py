@@ -19,6 +19,8 @@ from django.db.models import Q
 
 from carpool.api_docs import carpool_docs, profile_docs, user_message_docs
 
+from service import get_carpool_service
+
 
 @api_view()
 def exampleJson(request):
@@ -49,28 +51,41 @@ class CarpoolView(APIView):
             check_days = request.query_params.get('days', None)
             limit = request.query_params.get('limit', 4)
 
+            carpool_filter = {
+                "check_origin": check_origin,
+                "check_destination": check_destination,
+                "check_time": check_time,
+                "check_days": check_days,
+                "limit": limit
+            }
+
+            carpools = get_carpool_service(
+                carpools=carpools,
+                carpool_filter=carpool_filter
+            )
+
             # If any of the query params is not None, filter it
-            if check_origin:
-                carpools = carpools.filter(
-                    start_address__area__contains=check_origin)
+            # if check_origin:
+            #     carpools = carpools.filter(
+            #         start_address__area__contains=check_origin)
 
-            if check_destination:
-                carpools = carpools.filter(
-                    destination_address__area__contains=check_destination)
+            # if check_destination:
+            #     carpools = carpools.filter(
+            #         destination_address__area__contains=check_destination)
 
-            if check_time:
-                hour = check_time.split(':')[0]
+            # if check_time:
+            #     hour = check_time.split(':')[0]
 
-                carpools = carpools.filter(
-                    time__hour=hour
-                )
+            #     carpools = carpools.filter(
+            #         time__hour=hour
+            #     )
 
-            if check_days:
-                carpools = carpools.filter(
-                    days=check_days
-                )
+            # if check_days:
+            #     carpools = carpools.filter(
+            #         days=check_days
+            #     )
 
-            carpools = carpools.order_by('-created_at')[:limit]
+            # carpools = carpools.order_by('-created_at')[:limit]
 
             # Transform object into JSON, is necessary set many to True
             # because we are getting multiple instances
