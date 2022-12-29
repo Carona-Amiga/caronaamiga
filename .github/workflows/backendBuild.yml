@@ -6,6 +6,8 @@ on:
     paths: 
       - './backend/**'
       - '.github/workflows/backendBuild.yml'
+    paths-ignore:
+      - 'docs/**'
 jobs: 
   CI: 
     runs-on: ubuntu-latest
