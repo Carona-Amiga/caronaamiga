@@ -35,7 +35,7 @@ jobs:
         run: |
           echo "${{ secrets.PEM_FILE }}" | tr -d '\r' > key.pem 
           chmod 400 key.pem
-          scp -i key.pem -o "StrictHostKeyChecking=no" ./backend/docker-compose.yml azureuser@20.102.40.84:~
+          scp -i key.pem ./backend/docker-compose.yml azureuser@20.102.40.84:~
           ssh -i key.pem -o "StrictHostKeyChecking=no" azureuser@20.102.40.84 << 'ENDSSH'
             docker compose down
             docker compose up -d --build
