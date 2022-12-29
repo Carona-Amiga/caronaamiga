@@ -9,7 +9,7 @@ jobs:
     
     steps:
   
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2.6.0
       
       - name: Docker Login
         uses: docker/login-action@v2.1.0
@@ -23,5 +23,5 @@ jobs:
           context: .
           push: true
           tags: |
-            matheusinit/build:v1
-            matheusinit/build:latest
+            matheusinit/buildMain:v1
+            matheusinit/buildMain:latest
