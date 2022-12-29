@@ -21,7 +21,6 @@ jobs:
         uses: docker/build-push-action@v3.2.0
         with:
           context: ./frontend/.
-          file: ./frontend/.
           push: true
           tags: |
             matheusinit/build:v1
