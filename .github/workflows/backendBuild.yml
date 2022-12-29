@@ -23,5 +23,5 @@ jobs:
           context: ./backend/.
           push: true
           tags: |
-            matheusinit/buildBack:v1
-            matheusinit/buildBack:latest
+            matheusinit/build-back:v1
+            matheusinit/build-back:latest
