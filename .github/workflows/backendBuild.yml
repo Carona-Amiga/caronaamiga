@@ -1,1 +1,27 @@
+name: CI
 
+on:
+  push:
+    branches: [FelipeSousaRocha-patch-1]
+jobs: 
+  CI: 
+    runs-on: ubuntu-latest
+    
+    steps:
+  
+      - uses: actions/checkout@v2.6.0
+      
+      - name: Docker Login
+        uses: docker/login-action@v2.1.0
+        with:
+          username: ${{ secrets.DOCKER_HUB_LOGIN }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v3.2.0
+        with:
+          context: ./backend/.
+          push: true
+          tags: |
+            matheusinit/buildBack:v1
+            matheusinit/buildBack:latest
