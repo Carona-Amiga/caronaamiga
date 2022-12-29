@@ -23,5 +23,5 @@ jobs:
           context: ./frontend/.
           push: true
           tags: |
-            matheusinit/buildFrontend:v1
-            matheusinit/buildFrontend:latest
+            matheusinit/build:v1
+            matheusinit/build:latest
