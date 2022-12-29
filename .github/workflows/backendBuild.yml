@@ -37,5 +37,6 @@ jobs:
           chmod 400 key.pem
           scp -i key.pem -o "StrictHostKeyChecking=no" ./backend/docker-compose.yml azureuser@20.102.40.84:~
           ssh -i key.pem -o "StrictHostKeyChecking=no" azureuser@20.102.40.84 << 'ENDSSH'
-            "docker compose up -d"
+            docker compose down
+            docker compose up -d
           ENDSSH
