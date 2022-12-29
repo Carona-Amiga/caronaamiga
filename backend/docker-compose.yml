@@ -30,8 +30,4 @@ services:
       test: [ "CMD", "pg_isready", "-q", "-d", "${DB_NAME}", "-U", "${DB_USER}" ]
       timeout: 40s
       interval: 2s
-<<<<<<< HEAD
       retries: 20
-=======
-      retries: 20
->>>>>>> 238df82 (update docker-compose.yml with api rest server image)
