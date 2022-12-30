@@ -33,5 +33,5 @@ jobs:
         uses: Azure/pipelines@releases/v1
         with:
           azure-devops-project-url: 'https://dev.azure.com/ricardojackson/PDS'
-          azure-pipeline-name: 'PDS' 
+          azure-pipeline-name: 'Deploy' 
           azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
