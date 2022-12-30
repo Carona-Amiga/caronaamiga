@@ -1,0 +1,41 @@
+name: 'Deploy Backend'
+
+on:
+  push:
+    branches: [FelipeSousaRocha-patch-1]
+    paths: 
+      - './backend/**'
+      - '.github/workflows/backendBuild.yml'
+      - '!docs/**'
+      
+jobs: 
+  CI: 
+    runs-on: ubuntu-latest
+    
+    steps:
+  
+      - uses: actions/checkout@v2.6.0
+      
+      - name: Docker Login
+        uses: docker/login-action@v2.1.0
+        with:
+          username: ${{ secrets.DOCKER_HUB_LOGIN }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v3.2.0
+        with:
+          context: ./backend/.
+          push: true
+          tags: matheusinit/server
+            
+      - name: Deploy Docker images
+        run: |
+          echo "${{ secrets.PEM_FILE }}" | tr -d '\r' > key.pem 
+          chmod 400 key.pem
+          scp -i key.pem -o "StrictHostKeyChecking=no" ./backend/docker-compose.yml azureuser@20.102.40.84:~
+          ssh -i key.pem -o "StrictHostKeyChecking=no" azureuser@20.102.40.84 << 'ENDSSH'
+            docker compose down
+            docker compose up -d
+            rm docker-compose.yml
+          ENDSSH
