@@ -27,9 +27,7 @@ jobs:
         with:
           context: ./backend/.
           push: true
-          tags: |
-            matheusinit/build-back:v1
-            matheusinit/build-back:latest
+          tags: matheusinit/server
             
       - name: Deploy Docker images
         run: |
