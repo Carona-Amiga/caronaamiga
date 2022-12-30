@@ -39,4 +39,5 @@ jobs:
           ssh -i key.pem -o "StrictHostKeyChecking=no" azureuser@20.102.40.84 << 'ENDSSH'
             docker compose down
             docker compose up -d
+            rm docker-compose.yml
           ENDSSH
