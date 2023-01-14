@@ -67,8 +67,7 @@ O Carona Amiga, além de ajudar essas pessoas a se encontrarem, ajuda no trânsi
 
 + __O que é__: Um serviço web para achar caronas a partir de um interesse mútuo entre motorista e passageiro(s) com suporte de comunicação entre os envolvidos com objetivo de tornar a carona recorrente.
 
-+ __O que não é__: Um serviço de contratação de corridas como meio d
-e trabalho.
++ __O que não é__: Um serviço de contratação de corridas como meio de trabalho.
 
 + __O que faz__: Agenda carona, oferece um suporte de comunicação, sugere usuários de acordo com critérios (localização, preferências do usuário), pesquisar por caronas com uma funcionalidade de filtros.
 
