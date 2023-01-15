@@ -2,12 +2,17 @@ version: '3.7'
 
 services:
   api:
-    image: matheusinit/server:1.1
+    image: matheusinit/server:latest
     container_name: caronaamiga_server
     env_file:
       - ./.env
     environment:
       - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    volumes:
+      - static:/code/static
+    networks:
+      - backend_caronaamiga_network
     ports:
       - 8000:8000
     depends_on:
@@ -26,8 +31,19 @@ services:
     ports:
       - "5432:5432"
     restart: unless-stopped
+    networks:
+      - backend_caronaamiga_network
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "${DB_NAME}", "-U", "${DB_USER}" ]
       timeout: 40s
       interval: 2s
       retries: 20
+
+networks:
+  backend_caronaamiga_network:
+    external: true
+
+volumes:
+  static:
+    name: static
+#     external: true

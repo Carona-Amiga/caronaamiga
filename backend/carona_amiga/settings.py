@@ -33,7 +33,7 @@ DEBUG = True
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
-allowed_hosts = os.getenv('ALLOWED_HOSTS').split(',')
+allowed_hosts = ['localhost', '0.0.0.0']
 allowed_hosts.append(local_ip)
 
 ALLOWED_HOSTS = allowed_hosts
@@ -172,7 +172,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
