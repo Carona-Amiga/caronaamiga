@@ -16,7 +16,19 @@ Cronograma do projeto Carona Amiga com data, data final, gerente, tarefa, status
 |Sprint 03| Revisar cronograma(adicionar gerentes, revisar datas)|Para organizar as sprints, manter o controle de gerenciamento de tarefas e pessoas| Jackson | Pedro |22/11/2022| 15 dias |29/11/2022|29/11/2022|5W2H| R$194,80 |Em andamento|
 |Sprint 03| Primeira Versão do Carona Amiga na VM (Dockerfile e docker.compose.yml)|Utilização de container não é necessário rodar um novo SO, dentro do SO da máquina física|Todos| Pedro |22/11/2022|15 dias|29/11/2022|xx/xx/xxxx|Azure ou DockerHub| R$1.168,80 |Em andamento|
 |Sprint 04|Banca|Apresentação da primeira parte do PDS|Felipe, Jackson, Matheus e Pedro|Jackson| 06/12/2022 | 15 dias | 06/12/2022 | 06/12/2022 |Apresentação demonstrativa do PDS| R$584,40 |Em andamento |
-|Sprint 04| Estudar automação (GitHub Actioins/Azure) | Motivo | - | Jackson | 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx| - |   - |Não iniciado |
-|Sprint 04| CI/CD | Motivo | - | Jackson | 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx|   -   |  -   |Não iniciado|
-|Sprint 04| Apresentar docs (Riscos, Custos) | Motivo | - | Jackson | 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx|   -  |   -   |Não iniciado |
+|Sprint 04| Estudar automação (GitHub Actioins/Azure) | Motivo | - |Jackson| 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx| - |   - |Não iniciado |
+|Sprint 04| CI/CD | Motivo | - |Jackson| 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx|   -   |  -   |Não iniciado|
+|Sprint 04| Apresentar docs (Riscos, Custos) | Motivo | - |Jackson| 13/12/2022 | 15 dias |20/12/2022|xx/xx/xxxx|   -  |   -   |Não iniciado |
 |Sprint 04| Demandas particulares (componentes modificado: FE, BE, autenticação, JWT ) |Motivo| - |Jackson|13/12/2022|15 dias|20/12/2022|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 05| Tarefas  |Motivo| - |Matheus Oliveira|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 05| Tarefas  |Motivo| - |Matheus Oliveira|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 05| Tarefas  |Motivo| - |Matheus Oliveira|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 05| Tarefas  |Motivo| - |Matheus Oliveira|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 06| Tarefas  |Motivo| - |Felipe Rocha|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 06| Tarefas  |Motivo| - |Felipe Rocha|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 06| Tarefas  |Motivo| - |Felipe Rocha|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+|Sprint 06| Tarefas  |Motivo| - |Felipe Rocha|27/12/2022|15 dias|03/01/2023|xx/xx/xxxx|- |-   |Não iniciado|
+
+
+
+
