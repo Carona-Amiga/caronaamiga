@@ -33,7 +33,7 @@ DEBUG = True
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
-allowed_hosts = ['localhost', '0.0.0.0']
+allowed_hosts = str(os.getenv('ALLOWED_HOSTS')).split(',')
 allowed_hosts.append(local_ip)
 
 ALLOWED_HOSTS = allowed_hosts
