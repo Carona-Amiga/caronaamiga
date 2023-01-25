@@ -21,6 +21,9 @@ As ferramentas a seguir estão sendo utilizadas no projeto:
  - [Docker](https://docs.docker.com/)
  - [Vite](https://vitejs.dev/guide/)
  - [Bootstrap](https://react-bootstrap.github.io/)
+ - [Nginx](https://www.nginx.com/)
+ - [Gunicorn](https://gunicorn.org/)
+ - [Github Actions](https://github.com/features/actions)
 
 # Instalação
 
