@@ -2,11 +2,23 @@ version: '3'
 
 services:
   frontend:
-    image: matheusinit/frontend
+    image: matheusinit/frontend:latest
     container_name: caronaamiga_front
     env_file:
       - ./.env
+    volumes:
+      - static:/var/www/static
+    networks:
+      - backend_caronaamiga_network
     environment:
       - VITE_API_URL=${VITE_API_URL}
     ports:
       - 80:80
+
+networks:
+  backend_caronaamiga_network:
+    external: true
+
+volumes:
+  static:
+    external: true
