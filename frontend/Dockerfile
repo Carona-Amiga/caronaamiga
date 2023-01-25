@@ -9,17 +9,19 @@ RUN apk add --update python3 make g++\
 
 RUN npm install --force
 
-COPY ./src src
+COPY . .
 
-COPY ./public public
+# COPY ./src src
 
-COPY ./index.html .
+# COPY ./public public
 
-COPY ./nginx.conf .
+# COPY ./index.html .
 
-COPY ./vite.config.js .
+# COPY ./nginx.conf .
 
-COPY ./.env .
+# COPY ./vite.config.js .
+
+# COPY ./.env .
 
 RUN npm run build
 
