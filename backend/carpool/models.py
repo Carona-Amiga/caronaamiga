@@ -8,11 +8,11 @@ class Profile(models.Model):
     photo = models.CharField(
         max_length=100, default='/carpool/assets/profile/avatar.png')
     driver_license_number = models.CharField(max_length=11)
-    phone_number = models.CharField(max_length=11)
+    phone_number = models.CharField(max_length=11, blank=True)
     is_driver = models.BooleanField(default=False)
     email = models.CharField(max_length=50)
     username = models.CharField(max_length=50)
-    bio = models.CharField(max_length=400)
+    bio = models.CharField(max_length=400, blank=True)
     rating = models.FloatField(default=5.0)
     created_at = models.DateTimeField(auto_now_add=True)
     account = models.OneToOneField(

@@ -1,4 +1,4 @@
-from models import Carpool
+from carpool.models import Carpool
 from django.db.models.manager import BaseManager
 
 
