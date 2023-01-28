@@ -42,7 +42,7 @@ export const CreateAccount = () => {
 
   return (
     <Container className='row g-0'>
-      <div className='col-12 col-md-5 col-lg-6 h-100 auth-background-col fixed-bottom'>
+      <div className='col-12 col-md-5 col-lg-6 auth-background-col fixed-bottom'>
         <div className='auth-background-holder'></div>
         <div className='auth-background-mask'></div>
       </div>
