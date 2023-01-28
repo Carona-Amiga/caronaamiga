@@ -219,7 +219,12 @@ class ProfileView(APIView):
             phone_number = data['phone_number']
             email = data['email']
             username = data['username']
-            bio = data['bio']
+
+            bio = ""
+
+            if hasattr(data, 'bio'):
+                bio = data['bio']
+
             password = data['password']
 
             # Verify if the username is taken, if not exist set to None
