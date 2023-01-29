@@ -33,9 +33,9 @@ jobs:
           push: true
           tags: matheusinit/server
             
-      - name: Deploy web App using GH Action azure/webapps-deploy
-        uses: azure/webapps-deploy@v2
+      - name: Deploy Docker images
+        uses: Azure/pipelines@releases/v1
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_BACKEND }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          azure-devops-project-url: 'https://dev.azure.com/matheusoliveira1/DSC'
+          azure-pipeline-name: 'Release-1' 
+          azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
