@@ -9,19 +9,12 @@
    Data    | Versão |    Descrição   | Autor(a)
 -----------|--------|----------------|-----------------
 27/12/2022 |  1.0   | Release incial | Felipe Rocha
------------|--------|----------------|-----------------
 27/12/2022 |  1.0   | Adicionar informações sobre Teste de Integridade de Dados e do Banco de Dados | Matheus Oliveira
------------|--------|----------------|-----------------
 29/12/2022 |  1.0   | Adicionar Teste de Carga e Teste de performance | Felipe Rocha
------------|--------|----------------|-----------------
 29/12/2022 |  1.0   | Adicionado Teste de Validação de Interface | Pedro Barros
------------|--------|----------------|-----------------
 24/01/2023 |  1.1   | Criando Teste Unitário | Jackson Ricardo
------------|--------|----------------|-----------------
 26/01/2023 |  1.1   | Criando Teste Unitário | Felipe Rocha
------------|--------|----------------|-----------------
 28/01/2023 |  1.1   | Criando Teste Unitário | Pedro Barros
------------|--------|----------------|-----------------
 29/01/2023 |  1.1   | Criando Teste de carga | Felipe Rocha
  
 
