@@ -1,5 +1,9 @@
 name: 'Deploy Backend'
 
+env:
+  AZURE_WEBAPP_NAME: carona-amiga-api # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: './backend/' 
+
 on:
   push:
     branches: [main]
@@ -29,9 +33,9 @@ jobs:
           push: true
           tags: matheusinit/server
             
-      - name: Deploy Docker images
-        uses: Azure/pipelines@releases/v1
+      - name: Deploy web App using GH Action azure/webapps-deploy
+        uses: azure/webapps-deploy@v2
         with:
-          azure-devops-project-url: 'https://dev.azure.com/ricardojackson/PDS'
-          azure-pipeline-name: 'Deploy' 
-          azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_BACKEND }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
