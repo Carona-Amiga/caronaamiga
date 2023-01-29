@@ -37,5 +37,5 @@ jobs:
         uses: Azure/pipelines@releases/v1
         with:
           azure-devops-project-url: 'https://dev.azure.com/matheusoliveira1/DSC'
-          azure-pipeline-name: 'Release-1' 
+          azure-pipeline-name: 'Release Pipeline Backend' 
           azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
